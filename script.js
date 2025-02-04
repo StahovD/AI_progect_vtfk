@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Intersection Observer для анімації появи секцій
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -28,16 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-// Паралакс ефект для аватара
-window.addEventListener('mousemove', (e) => {
-    const avatar = document.querySelector('.avatar');
-    const rect = avatar.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-    
-    const moveX = x * 0.01;
-    const moveY = y * 0.01;
-    
-    avatar.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    // Паралакс ефект для аватара
+    window.addEventListener('mousemove', (e) => {
+        const avatar = document.querySelector('.avatar');
+        const rect = avatar.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        
+        const moveX = x * 0.01;
+        const moveY = y * 0.01;
+        
+        avatar.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
 });
-                          
